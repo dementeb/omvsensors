@@ -1,6 +1,10 @@
 omvsensors
 ==========
 
+updated (in progress) for OMV 1.X
+==========
+
+
 OMV-script for easy setup of sensors (CPU Temperature, Fanspeed, and HDD Temperature)
 
 
