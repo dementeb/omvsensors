@@ -6,13 +6,8 @@
 
 Ext.define("OMV.module.admin.diagnostic.system.plugin.Fanspeed", {
         extend: "OMV.workspace.panel.RrdGraph",
+        alias: "omv.plugin.diagnostic.system.Fanspeed",
 
+        title: _("Fan speed"),
         rrdGraphName: "fanspeed"
-});
-
-OMV.PluginManager.register({
-        ptype: "diagnostic",
-        id: "system",
-        text: _("Fanspeed"),
-        className: "OMV.module.admin.diagnostic.system.plugin.Fanspeed"
 });
