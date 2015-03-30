@@ -410,7 +410,7 @@ fi
 			_log "WARN: Setting pluginconf to 1 - one sensor, no fanspeed"
 			pluginconf="1"; }
 
-[[ -f /var/lib/collectd/rrd/localhost/$SENSOR1 ]] || {
+[[ -f /var/lib/rrdcached/db/localhost/$SENSOR1 ]] || {
 	_log "WARN: given rrd-file in /var/lib/collectd/rrd/localhost for SENSOR1 does not exist"
 	_log "WARN: You set it to $SENSOR1"
 	_log "WARN: Pleast check your config-file"
@@ -420,7 +420,7 @@ fi
 	}
 
 if [ ! -z "$SENSOR2" ]; then
-	[[ -f /var/lib/collectd/rrd/localhost/$SENSOR2 ]] || {
+	[[ -f /var/lib/rrdcached/db/localhost/$SENSOR2 ]] || {
 	_log "WARN: given rrd-file in /var/lib/collectd/rrd/localhost for SENSOR2 does not exist"
 	_log "WARN: You set it to $SENSOR2"
 	_log "WARN: Pleast check your config-file"
@@ -431,7 +431,7 @@ if [ ! -z "$SENSOR2" ]; then
 fi
 
 if [ ! -z "$FANSPEED" ]; then
-	[[ -f /var/lib/collectd/rrd/localhost/$FANSPEED ]] || {
+	[[ -f /var/lib/rrdcached/db/localhost/$FANSPEED ]] || {
 	_log "WARN: given rrd-file in /var/lib/collectd/rrd/localhost for FANSPEED does not exist"
 	_log "WARN: You set it to $FANSPEED"
 	_log "WARN: Pleast check your config-file"
@@ -513,7 +513,7 @@ if (( "$NUM_HDD" > 0 )); then
 	for i in $(seq 1 $NUM_HDD); do
 		eval HDD_SENSOR="\${HDD${i}}"
 		if [ ! -z "$HDD_SENSOR_NAME" ]; then
-			[[ -f /var/lib/collectd/rrd/localhost/$HDD_SENSOR ]] || {
+			[[ -f /var/lib/rrdcached/db/localhost/$HDD_SENSOR ]] || {
 				_log "WARN: given rrd-file in /var/lib/collectd/rrd/localhost for HDD${i} does not exist"
 				eval _log "WARN: You set it to \${HDD${i}}"
 				_log "WARN: Pleast check your config-file"
