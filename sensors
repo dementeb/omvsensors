@@ -57,7 +57,7 @@ f_end_section() {
 f_plugin_sensors_header() {
 cat <<EOF >> ${OMV_COLLECTD_RRDTOOL_MKGRAPH}
 # Plugin: sensors
-TITLE_LOAD="CPU temperature"
+TITLE_LOAD="PC temperature"
 COLOR_CPU_CORE_0="#0000fd" # blue
 COLOR_CPU_CORE_1="#ff0000" # red
 
@@ -163,7 +163,7 @@ rrdtool graph \${IMGDIR}/sensors-hour.png --start \${HOURSTART} \${DEFAULTS} --t
 DEF:cpuc0avg=\${DATA}/$SENSOR1:value:AVERAGE \
 DEF:cpuc0min=\${DATA}/$SENSOR1:value:MIN \
 DEF:cpuc0max=\${DATA}/$SENSOR1:value:MAX \
-LINE1:cpuc0avg\${COLOR_CPU_CORE_0}:"Core 1" \
+LINE1:cpuc0avg\${COLOR_CPU_CORE_0}:"MotherBoard" \
 GPRINT:cpuc0min:MIN:"%4.2lf Min" \
 GPRINT:cpuc0avg:AVERAGE:"%4.2lf Avg" \
 GPRINT:cpuc0max:MAX:"%4.2lf Max" \
@@ -173,7 +173,7 @@ rrdtool graph \${IMGDIR}/sensors-day.png --start \${DAYSTART} \${DEFAULTS} --tit
 DEF:cpuc0avg=\${DATA}/$SENSOR1:value:AVERAGE \
 DEF:cpuc0min=\${DATA}/$SENSOR1:value:MIN \
 DEF:cpuc0max=\${DATA}/$SENSOR1:value:MAX \
-LINE1:cpuc0avg\${COLOR_CPU_CORE_0}:"Core 1" \
+LINE1:cpuc0avg\${COLOR_CPU_CORE_0}:"MotherBoard" \
 GPRINT:cpuc0min:MIN:"%4.2lf Min" \
 GPRINT:cpuc0avg:AVERAGE:"%4.2lf Avg" \
 GPRINT:cpuc0max:MAX:"%4.2lf Max" \
@@ -183,7 +183,7 @@ rrdtool graph \${IMGDIR}/sensors-week.png --start \${WEEKSTART} \${DEFAULTS} --t
 DEF:cpuc0avg=\${DATA}/$SENSOR1:value:AVERAGE \
 DEF:cpuc0min=\${DATA}/$SENSOR1:value:MIN \
 DEF:cpuc0max=\${DATA}/$SENSOR1:value:MAX \
-LINE1:cpuc0avg\${COLOR_CPU_CORE_0}:"Core 1" \
+LINE1:cpuc0avg\${COLOR_CPU_CORE_0}:"MotherBoard" \
 GPRINT:cpuc0min:MIN:"%4.2lf Min" \
 GPRINT:cpuc0avg:AVERAGE:"%4.2lf Avg" \
 GPRINT:cpuc0max:MAX:"%4.2lf Max" \
@@ -193,7 +193,7 @@ rrdtool graph \${IMGDIR}/sensors-month.png --start \${MONTHSTART} \${DEFAULTS} -
 DEF:cpuc0avg=\${DATA}/$SENSOR1:value:AVERAGE \
 DEF:cpuc0min=\${DATA}/$SENSOR1:value:MIN \
 DEF:cpuc0max=\${DATA}/$SENSOR1:value:MAX \
-LINE1:cpuc0avg\${COLOR_CPU_CORE_0}:"Core 1" \
+LINE1:cpuc0avg\${COLOR_CPU_CORE_0}:"MotherBoard" \
 GPRINT:cpuc0min:MIN:"%4.2lf Min" \
 GPRINT:cpuc0avg:AVERAGE:"%4.2lf Avg" \
 GPRINT:cpuc0max:MAX:"%4.2lf Max" \
@@ -203,7 +203,7 @@ rrdtool graph \${IMGDIR}/sensors-year.png --start \${YEARSTART} \${DEFAULTS} --t
 DEF:cpuc0avg=\${DATA}/$SENSOR1:value:AVERAGE \
 DEF:cpuc0min=\${DATA}/$SENSOR1:value:MIN \
 DEF:cpuc0max=\${DATA}/$SENSOR1:value:MAX \
-LINE1:cpuc0avg\${COLOR_CPU_CORE_0}:"Core 1" \
+LINE1:cpuc0avg\${COLOR_CPU_CORE_0}:"MotherBoard" \
 GPRINT:cpuc0min:MIN:"%4.2lf Min" \
 GPRINT:cpuc0avg:AVERAGE:"%4.2lf Avg" \
 GPRINT:cpuc0max:MAX:"%4.2lf Max" \
@@ -223,12 +223,12 @@ DEF:cpuc0max=\${DATA}/$SENSOR1:value:MAX \
 DEF:cpuc1avg=\${DATA}/$SENSOR2:value:AVERAGE \
 DEF:cpuc1min=\${DATA}/$SENSOR2:value:MIN \
 DEF:cpuc1max=\${DATA}/$SENSOR2:value:MAX \
-LINE1:cpuc0avg\${COLOR_CPU_CORE_0}:"Core 1" \
+LINE1:cpuc0avg\${COLOR_CPU_CORE_0}:"MotherBoard" \
 GPRINT:cpuc0min:MIN:"%4.2lf Min" \
 GPRINT:cpuc0avg:AVERAGE:"%4.2lf Avg" \
 GPRINT:cpuc0max:MAX:"%4.2lf Max" \
 GPRINT:cpuc0avg:LAST:"%4.2lf Last\l" \
-LINE1:cpuc1avg\${COLOR_CPU_CORE_1}:"Core 2" \
+LINE1:cpuc1avg\${COLOR_CPU_CORE_1}:"CPU" \
 GPRINT:cpuc1min:MIN:"%4.2lf Min" \
 GPRINT:cpuc1avg:AVERAGE:"%4.2lf Avg" \
 GPRINT:cpuc1max:MAX:"%4.2lf Max" \
@@ -241,12 +241,12 @@ DEF:cpuc0max=\${DATA}/$SENSOR1:value:MAX \
 DEF:cpuc1avg=\${DATA}/$SENSOR2:value:AVERAGE \
 DEF:cpuc1min=\${DATA}/$SENSOR2:value:MIN \
 DEF:cpuc1max=\${DATA}/$SENSOR2:value:MAX \
-LINE1:cpuc0avg\${COLOR_CPU_CORE_0}:"Core 1" \
+LINE1:cpuc0avg\${COLOR_CPU_CORE_0}:"MotherBoard" \
 GPRINT:cpuc0min:MIN:"%4.2lf Min" \
 GPRINT:cpuc0avg:AVERAGE:"%4.2lf Avg" \
 GPRINT:cpuc0max:MAX:"%4.2lf Max" \
 GPRINT:cpuc0avg:LAST:"%4.2lf Last\l" \
-LINE1:cpuc1avg\${COLOR_CPU_CORE_1}:"Core 2" \
+LINE1:cpuc1avg\${COLOR_CPU_CORE_1}:"CPU" \
 GPRINT:cpuc1min:MIN:"%4.2lf Min" \
 GPRINT:cpuc1avg:AVERAGE:"%4.2lf Avg" \
 GPRINT:cpuc1max:MAX:"%4.2lf Max" \
@@ -259,12 +259,12 @@ DEF:cpuc0max=\${DATA}/$SENSOR1:value:MAX \
 DEF:cpuc1avg=\${DATA}/$SENSOR2:value:AVERAGE \
 DEF:cpuc1min=\${DATA}/$SENSOR2:value:MIN \
 DEF:cpuc1max=\${DATA}/$SENSOR2:value:MAX \
-LINE1:cpuc0avg\${COLOR_CPU_CORE_0}:"Core 1" \
+LINE1:cpuc0avg\${COLOR_CPU_CORE_0}:"MotherBoard" \
 GPRINT:cpuc0min:MIN:"%4.2lf Min" \
 GPRINT:cpuc0avg:AVERAGE:"%4.2lf Avg" \
 GPRINT:cpuc0max:MAX:"%4.2lf Max" \
 GPRINT:cpuc0avg:LAST:"%4.2lf Last\l" \
-LINE1:cpuc1avg\${COLOR_CPU_CORE_1}:"Core 2" \
+LINE1:cpuc1avg\${COLOR_CPU_CORE_1}:"CPU" \
 GPRINT:cpuc1min:MIN:"%4.2lf Min" \
 GPRINT:cpuc1avg:AVERAGE:"%4.2lf Avg" \
 GPRINT:cpuc1max:MAX:"%4.2lf Max" \
@@ -277,12 +277,12 @@ DEF:cpuc0max=\${DATA}/$SENSOR1:value:MAX \
 DEF:cpuc1avg=\${DATA}/$SENSOR2:value:AVERAGE \
 DEF:cpuc1min=\${DATA}/$SENSOR2:value:MIN \
 DEF:cpuc1max=\${DATA}/$SENSOR2:value:MAX \
-LINE1:cpuc0avg\${COLOR_CPU_CORE_0}:"Core 1" \
+LINE1:cpuc0avg\${COLOR_CPU_CORE_0}:"MotherBoard" \
 GPRINT:cpuc0min:MIN:"%4.2lf Min" \
 GPRINT:cpuc0avg:AVERAGE:"%4.2lf Avg" \
 GPRINT:cpuc0max:MAX:"%4.2lf Max" \
 GPRINT:cpuc0avg:LAST:"%4.2lf Last\l" \
-LINE1:cpuc1avg\${COLOR_CPU_CORE_1}:"Core 2" \
+LINE1:cpuc1avg\${COLOR_CPU_CORE_1}:"CPU" \
 GPRINT:cpuc1min:MIN:"%4.2lf Min" \
 GPRINT:cpuc1avg:AVERAGE:"%4.2lf Avg" \
 GPRINT:cpuc1max:MAX:"%4.2lf Max" \
@@ -295,12 +295,12 @@ DEF:cpuc0max=\${DATA}/$SENSOR1:value:MAX \
 DEF:cpuc1avg=\${DATA}/$SENSOR2:value:AVERAGE \
 DEF:cpuc1min=\${DATA}/$SENSOR2:value:MIN \
 DEF:cpuc1max=\${DATA}/$SENSOR2:value:MAX \
-LINE1:cpuc0avg\${COLOR_CPU_CORE_0}:"Core 1" \
+LINE1:cpuc0avg\${COLOR_CPU_CORE_0}:"MotherBoard" \
 GPRINT:cpuc0min:MIN:"%4.2lf Min" \
 GPRINT:cpuc0avg:AVERAGE:"%4.2lf Avg" \
 GPRINT:cpuc0max:MAX:"%4.2lf Max" \
 GPRINT:cpuc0avg:LAST:"%4.2lf Last\l" \
-LINE1:cpuc1avg\${COLOR_CPU_CORE_1}:"Core 2" \
+LINE1:cpuc1avg\${COLOR_CPU_CORE_1}:"CPU" \
 GPRINT:cpuc1min:MIN:"%4.2lf Min" \
 GPRINT:cpuc1avg:AVERAGE:"%4.2lf Avg" \
 GPRINT:cpuc1max:MAX:"%4.2lf Max" \
