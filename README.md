@@ -43,7 +43,7 @@ k10temp-pci-00c3
 Adapter: PCI adapter
 temp1:       +58.5°C  (high = +70.0°C, crit = +100.0°C)
 ```
-1. Download it: `wget https://github.com/fergbrain/omvsensors/archive/master.zip`
+1. Download it: `wget https://github.com/dementeb/omvsensors/archive/master.zip`
 1. Unpack it: `unzip master.zip`
 1. Install it:
 
